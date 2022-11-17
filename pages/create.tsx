@@ -78,7 +78,7 @@ function Create({}: Props) {
         if(listingType.value === 'directListing'){
             createDirectListing(
                 {
-                assertContractingAddress:process.env.NEXT_PUBLIC_COLLECTION_CONTACT!,
+                    assetContractAddress:process.env.NEXT_PUBLIC_COLLECTION_CONTACT!,
                 tokenId: selectNft.metadata.id,
                 currencyContractAddress: NATIVE_TOKEN_ADDRESS,
                 listingDurationInSeconds: 60 * 60 * 24 * 7, //1 week
@@ -100,7 +100,7 @@ function Create({}: Props) {
 
         if (listingType.value === 'auctionListing'){
             createAuctionListing({
-                assertContractingAddress: process.env.NEXT_PUBLIC_COLLECTION_CONTRACT!,
+                assetContractAddress: process.env.NEXT_PUBLIC_COLLECTION_CONTRACT!,
                 tokenId: selectNft.metadata.id,
                 currencyContractAddress: NATIVE_TOKEN_ADDRESS,
                 listingDurationInSeconds: 60 * 60 * 24 * 7, //1 week
