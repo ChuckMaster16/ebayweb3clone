@@ -80,7 +80,7 @@ function addItem({}: Props) {
                           <label htmlFor="">Description</label>
                           <input className='formFill' placeholder='Enter the description..' type="text" name='description' id='description'/>
                           <label htmlFor="">Image of the Item</label>
-                          <input type="file" onChange={(e) => {
+                          <input type="file" onChange={(e:any) => {
                             if (e.target.files?.[0]) {
                                 setPreview(URL.createObjectURL(e.target.files[0]));
                                 setImage(e.target.files[0]);
