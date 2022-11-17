@@ -59,7 +59,7 @@ function Create({}: Props) {
         }=useCreateAuctionListing(contract);
   
 
-    const handleCreateListing = async (e: FormEvent<HTMLFormElement>) => {
+    const handleCreateListing = async (e: any) => {
         e.preventDefault();
 
         if (networkMismatch) {
