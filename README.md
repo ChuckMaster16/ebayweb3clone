@@ -1,2 +1,0 @@
-marketplace contract 0x32Cc3061eD2B65770Df30c9fEa2ca9e57343516b
-NFT collections contract  0xEACA7DEB9F1351440615790afacD683983C855bd
