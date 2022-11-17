@@ -84,7 +84,7 @@ function Create({}: Props) {
                 listingDurationInSeconds: 60 * 60 * 24 * 7, //1 week
                 quantity: 1,
                 buyoutPricePerToken: price.value,
-                startTimeStamp: new Date()
+                startTimestamp: new Date()
 
             }, {
                 onSuccess(data, variables, context){
@@ -106,7 +106,7 @@ function Create({}: Props) {
                 listingDurationInSeconds: 60 * 60 * 24 * 7, //1 week
                 quantity: 1,
                 buyoutPricePerToken: price.value,
-                startTimeStamp: new Date(),
+                startTimestamp: new Date(),
                 reservePricePerToken: 0,
             }, {
                 onSuccess(data, variables, context){
