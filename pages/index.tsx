@@ -8,6 +8,7 @@ import { useActiveListings, useContract, MediaRenderer } from '@thirdweb-dev/rea
 import { ListingNotFoundError, ListingType } from '@thirdweb-dev/sdk'
 import MonetizationOnIcon from '@mui/icons-material/MonetizationOn';
 import AvTimerIcon from '@mui/icons-material/AvTimer';
+import Link from 'next/link'
 
 
 const Home= () => {
@@ -34,7 +35,8 @@ const Home= () => {
         ):(
           <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5 mx-auto'>
             {listings?.map((listing) => (
-              <div className='flex flex-col z-30 shadow-lg card hover:scale-105 transition-all duration-150 ease-in-out ' key={listing.id}>
+              <Link key={listing.id} href={`/listing/${listing.id}`}>
+              <div className='flex flex-col z-30 shadow-lg card hover:scale-105 transition-all duration-150 ease-in-out '>
                 <div className='flex flex-1 flex-col pb-2 items-center'>
                   <MediaRenderer className='w-44' src={listing.asset.image}/> {/*//MediaRenderer is used to render images from THirdweb*/}
                 </div>
@@ -60,7 +62,8 @@ const Home= () => {
                     )}
                   </div>
                 </div>               
-              </div>              
+              </div> 
+              </Link>             
             ))}
           </div>
         )}
