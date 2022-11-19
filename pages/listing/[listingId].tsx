@@ -109,21 +109,21 @@ function ListingPage() {
 
     if (!listingId || !contract) return;
 
-    await buyNow({
-      id:listingId,
-      buyAmount:1,  
+    buyNow({
+      id: listingId,
+      buyAmount: 1,
       type: listing?.type,
-    },{
+    }, {
       onSuccess(data, variables, context) {
-        alert('NFT has been Purchase please check your wallet for owned NFTs')
+        alert('NFT has been Purchase please check your wallet for owned NFTs');
         console.log('SUCCESS', data);
-        rout.replace('/')
+        rout.replace('/');
       },
-      onError (error, variables, context){
+      onError(error, variables, context) {
         alert('NFT could not be acquired... please try again');
         console.log('ERROR', error);
       },
-     }
+    }
     );
   };
 
