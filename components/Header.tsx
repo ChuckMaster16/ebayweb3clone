@@ -18,10 +18,19 @@ function Header({}: Props) {
   return (
     <div className='max-w-6xl mx-auto p-2'>
         <nav className='flex justify-between'>
-            <div className='flex items-center space-x-4'> 
-                {address ? (<button onClick={disconnectWithMetamask} className='connectWalletbtn'>Hi, {address.slice(0,5) + "..." + address.slice(-4)}</button>
+            <div className='flex items-center space-x-4 '> 
+            <Link href='/'
+            className='hidden xs:inline sm:hidden md:hidden lg:hidden xl:hidden 2xl:hidden'>
+                    <Image 
+                    alt='THirdweb ebaylogo'
+                    width={100}
+                    height={100}
+                    src='https://res.cloudinary.com/chuckmaster/image/upload/v1668404667/ebayClone/ebay_m1crq5.png'
+                    className=' h-full w-full object-contain'/>
+                </Link>
+                {address ? (<button onClick={disconnectWithMetamask} className='connectWalletbtn text-xs'>Hi, {address.slice(0,5) + "..." + address.slice(-4)}</button>
                 ) :(
-                <button onClick={connectWithMetamask} className='connectWalletbtn'>Connect To Your wallet </button>) }
+                <button onClick={connectWithMetamask} className='connectWalletbtn text-xs'>Connect To Your wallet </button>) }
 
                 <p className='headerLinks'>eBay Offers</p> 
                 <p className='headerLinks'>Help & Contact</p> 
@@ -41,7 +50,7 @@ function Header({}: Props) {
         <hr className='mt-2 w-screen -ml-20' />
          
          <section className='flex items-center space-x-2 py-5'>
-            <div className='h-16 mt-2 w-28 md:w-44 cursor-pointer flex-shrink-0'>
+            <div className='h-16 mt-2 w-28 md:w-44 cursor-pointer flex-shrink-0 hidden sm:inline'>
                 <Link href='/'>
                     <Image 
                     alt='THirdweb ebaylogo'
@@ -59,7 +68,7 @@ function Header({}: Props) {
             <div className='flex items-center space-x-2 px-2 md:px-5 py-2 border-black border-2 flex-1'>
                 <SearchOutlinedIcon className='text-gray-300 '/>
                 <input className='flex-1 outline-none' type='text' placeholder='Search for anything'/>
-                <button className='border-gray-300 border-l pl-4 whitespace-nowrap text-sm'> All Catergories <ExpandMoreIcon/></button>
+                <button className='border-gray-300 border-l  pl-4 whitespace-nowrap text-sm'> All Catergories <ExpandMoreIcon/></button>
             </div>
 
             <button className='hidden sm:inline bg-blue-600 text-white px-5 md:px-10 py-2 border-2 border-blue-700'>Search</button>       
