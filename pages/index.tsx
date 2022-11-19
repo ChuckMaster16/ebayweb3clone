@@ -18,7 +18,7 @@ const Home= () => {
     );
     const {data: listings, isLoading: loadingListings} = useActiveListings(contract);
 
-    console.log(listings);
+
     
   return (
     <div className="">
