@@ -112,7 +112,7 @@ function ListingPage() {
     await buyNow({
       id:listingId,
       buyAmount:1,  
-      type:listing?.type,
+      type:listing?.type!,
     },{
       onSuccess(data, variables, context) {
         alert('NFT has been Purchase please check your wallet for owned NFTs')
